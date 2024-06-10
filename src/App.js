@@ -11,7 +11,7 @@ export const App = () => {
     if (num1 !== '' && num2 !== '' && !isNaN(num1) && !isNaN(num2) && operation) {
       const performCalculation = async () => {
         const encodedOperation = encodeURIComponent(operation);
-        const url = `http://127.0.0.1:8000/${encodedOperation}/?a=${num1}&b=${num2}`;
+        const url = `https://backend-calculation.onrender.com/${encodedOperation}/?a=${num1}&b=${num2}`;
         try {
           const response = await fetch(url);
           const data = await response.json();
